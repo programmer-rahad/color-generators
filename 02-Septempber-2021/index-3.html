@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Flipper ( Thursday 02-Septempber-2021 ) </title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: #f1f5f8;
+      }
+      .container {
+        overflow: hidden;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1170px;
+      }
+      .container > * {
+        float: left;
+        width: calc(100% / 3 - 10px);
+        background-color: #fff;
+        height: 100vh;
+        padding-left: 15px;
+        padding-right: 15px;
+        display: grid;
+        align-content: center;
+      }
+      .container > *:first-child {
+        background-color: Red;
+      }
+      .container > *:nth-child(2) {
+        margin-left: 15px;
+        margin-right: 15px;
+        background-color: green;
+      }
+      .container > *:nth-child(3) {
+        background-color: blue;
+      }
+      .color-flipper p {
+        font-size: 35px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+        color: #fff;
+        font-family: cursive;
+      }
+      .color-flipper button {
+        border: 0px solid;
+        padding: 11px 20px;
+        font-family: cursive;
+        background-color: #fff;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0px 1px 7px 1px rgba(0, 0, 0, 0.4);
+        margin-top: 15px;
+        cursor: pointer;
+        border-radius: 4px;
+        letter-spacing: 0.7px;
+      }
+      .color-flipper button:hover {
+        box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="color-flipper">
+      <div class="container">
+        <div class="simple">
+          <p>Red</p>
+          <button>Change background color</button>
+        </div>
+        <div class="simple">
+          <p>Green</p>
+          <button>Change background color</button>
+        </div>
+        <div class="simple">
+          <p>Blue</p>
+          <button>Change background color</button>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Variables
+      const simpleColors = [
+        "red",
+        "green",
+        "blue",
+        "orange",
+        "deeppink",
+        "aqua",
+        "maroon",
+        "gray",
+      ];
+      const buttons = document.querySelectorAll(".color-flipper button");
+      for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", function () {
+          const color =
+            simpleColors[Math.floor(Math.random() * simpleColors.length)];
+          this.parentElement.style.backgroundColor = color;
+          this.previousElementSibling.textContent = color;
+        });
+      }
+    </script>
+  </body>
+</html>
