@@ -1,7 +1,6 @@
 # Vanilla JS Color Generator Projects
 
-This repository contains various vanilla JavaScript color generator projects.
-Each project is designed to showcase different tab implementations.
+This repository contains various vanilla JavaScript color generator projects. 
 Feel free to explore the source code of each project.
 
 ## Live links of the projects:
