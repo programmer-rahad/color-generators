@@ -19,7 +19,7 @@ Feel free to explore the source code of each project.
 
 1. Clone the repository.
 2. Navigate to the project directory.
-3. Open the `index.html` file in your web browser.
+3. Open the `.html` files in your web browser.
 
-Enjoy exploring the various tab projects!
+Enjoy exploring the various color generator projects!
  
