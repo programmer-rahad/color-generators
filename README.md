@@ -1,4 +1,4 @@
-# Vanilla JS Tab Projects
+# Vanilla JS Color Generator Projects
 
 This repository contains various vanilla JavaScript color generator projects.
 Each project is designed to showcase different tab implementations.
